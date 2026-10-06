@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Presentation — Join Now</title>
+    <title>Travel Savings Presentation — Exclusive Travel Certificate</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -261,6 +261,56 @@
             .header h1 { font-size: 1.3rem; }
         }
 
+
+        /* ===== Travel gift redesign ===== */
+        body { background: linear-gradient(180deg, #edf7fb 0%, #f7f9fb 45%, #ffffff 100%); }
+        .container { max-width: 560px; width: 100%; box-sizing: border-box; }
+        .header { margin-bottom: 22px; }
+        .card { border: 1px solid rgba(15,52,96,0.07); }
+        .hero { min-height: 390px; border-radius: 16px !important; box-shadow: 0 12px 35px rgba(15,52,96,0.18); }
+        .hero-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 55%; }
+        .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(3,22,45,0.12) 5%, rgba(3,22,45,0.18) 35%, rgba(3,22,45,0.82) 100%); }
+        .hero-content { min-height:390px; display:flex; flex-direction:column; justify-content:flex-end; padding:28px 24px 96px; text-align:left; }
+        .hero-content .live-badge { align-self:flex-start; background:rgba(255,255,255,0.95); color:#0f3460; margin-bottom:12px; }
+        .hero-kicker { color:#ffe28a; font-size:.72rem; font-weight:800; letter-spacing:2.2px; margin-bottom:8px; }
+        .hero-content h1 { display:block; color:#fff; font-size:clamp(1.55rem,5vw,2.15rem); line-height:1.08; margin-bottom:10px; text-shadow:0 2px 12px rgba(0,0,0,.35); }
+        .hero-subtitle { color:#fff; font-size:clamp(1rem,2.8vw,1.25rem); line-height:1.4; max-width:650px; }
+        .hero-subtitle strong { color:#ffe28a; }
+        .hero-stay strong { color:#ffe28a; }
+        .hero-stay { margin-top:12px; max-width:620px; color:#fff; font-size:.9rem; font-weight:600; background:rgba(7,29,52,.62); border-left:3px solid #ffd166; padding:10px 13px; border-radius:0 9px 9px 0; }
+        .hero-bonus { position:absolute; left:18px; right:18px; bottom:18px; z-index:3; max-width:none; margin:0; background:rgba(255,255,255,.96); }
+        .gifts-card { padding:22px; }
+        .section-kicker { text-align:center; color:#b07a00; font-size:.72rem; font-weight:800; letter-spacing:2px; margin-bottom:5px; }
+        .gift-heading { display:block !important; text-align:center; font-size:1.55rem !important; margin-bottom:7px !important; }
+        .gift-intro { text-align:center; color:#555; max-width:650px; margin:0 auto 22px; font-size:.95rem; }
+        .gift-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+        .gift-tile { overflow:hidden; background:#fff; border:1px solid #e3e9ef; border-radius:16px; box-shadow:0 5px 16px rgba(15,52,96,.08); transition:transform .2s ease, box-shadow .2s ease; }
+        .gift-tile:hover { transform:translateY(-3px); box-shadow:0 10px 24px rgba(15,52,96,.14); }
+        .gift-featured { grid-column:1/-1; }
+        .gift-image-wrap { position:relative; height:125px; overflow:hidden; background:#dfeaf0; }
+        .gift-featured .gift-image-wrap { height:180px; }
+        .gift-image-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; }
+        .gift-tile:hover img { transform:scale(1.035); }
+        .gift-badge { position:absolute; left:13px; top:13px; background:#0f3460; color:#fff; border-radius:999px; padding:5px 9px; font-size:.62rem; font-weight:800; letter-spacing:1px; }
+        .gift-copy { padding:12px 13px 14px; }
+        .gift-copy h3 { color:#0f3460; font-size:1rem; line-height:1.25; margin-bottom:5px; }
+        .gift-copy p { color:#666; font-size:.83rem; line-height:1.45; }
+        .gift-copy strong { color:#0f3460; }
+        .not-cruising { grid-column:1/-1; text-align:center; background:#f2f7fa; border:1px dashed #b8cbd8; color:#526473; padding:11px 14px; border-radius:12px; font-size:.86rem; }
+        .not-cruising span { color:#0f3460; font-weight:800; letter-spacing:.5px; }
+        .complete-banner { display:flex; gap:11px; align-items:flex-start; margin-top:20px; padding:14px 15px; background:linear-gradient(90deg,#fff8e4,#fffdf7); border:1px solid #f0cf70; border-radius:13px; color:#5d4a19; font-size:.86rem; line-height:1.45; }
+        .complete-icon { flex:0 0 27px; width:27px; height:27px; border-radius:50%; background:#0f3460; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; }
+        @media (max-width: 620px) {
+            .container { width:100%; max-width:560px; padding-left:12px; padding-right:12px; }
+            .hero { min-height:410px; }
+            .hero-content { min-height:410px; padding:22px 17px 105px; }
+            .hero-bonus { left:14px; right:14px; bottom:14px; padding:9px 12px; font-size:.77rem; }
+            .gifts-card { padding:17px; }
+            .gift-grid { grid-template-columns:1fr; }
+            .gift-featured, .not-cruising { grid-column:auto; }
+            .gift-featured .gift-image-wrap, .gift-image-wrap { height:155px; }
+        }
+
         /* ===== Enhancement layer ===== */
         .card h2 svg { flex-shrink: 0; }
 
@@ -430,7 +480,34 @@
         .modal-back { margin-top: 18px; background: #f0f4f8; border: none; color: #0f3460; font-weight: 600;
             padding: 10px 18px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; }
         .modal-back:hover { background: #e2e8f0; }
-    </style>
+    
+        /* Compact + mobile-safe sizing */
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { max-width:100%; overflow-x:hidden; }
+        img { max-width:100%; }
+        .container { width:100%; max-width:560px; }
+        .card { width:100%; }
+        .gift-copy h3 { overflow-wrap:anywhere; }
+        @media (max-width: 480px) {
+            body { padding:16px 10px; }
+            .container { padding-left:0; padding-right:0; }
+            .hero { min-height:390px; }
+            .hero-content { min-height:390px; padding:20px 14px 100px; }
+            .hero-content h1 { font-size:1.45rem; }
+            .hero-subtitle { font-size:.92rem; }
+            .hero-stay { font-size:.76rem; padding:8px 9px; }
+            .hero-bonus { left:9px; right:9px; bottom:9px; padding:8px 9px; font-size:.70rem; }
+            .gifts-card { padding:13px; }
+            .gift-heading { font-size:1.25rem !important; }
+            .gift-intro { font-size:.84rem; margin-bottom:12px; }
+            .gift-grid { gap:9px; }
+            .gift-featured .gift-image-wrap, .gift-image-wrap { height:140px; }
+            .gift-copy { padding:9px 10px 11px; }
+            .gift-copy h3 { font-size:.91rem; }
+            .gift-copy p { font-size:.76rem; }
+            .complete-banner { font-size:.76rem; padding:10px 11px; }
+        }
+</style>
 <base target="_blank">
 <base target="_blank">
 </head>
@@ -438,53 +515,20 @@
     <div class="container">
         <div class="header">
             <div class="card hero">
-                <svg class="hero-scene" viewBox="0 0 560 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-                <defs>
-                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stop-color="#9fd9f6"/>
-                        <stop offset="1" stop-color="#e6f6ff"/>
-                    </linearGradient>
-                </defs>
-                <rect width="560" height="180" fill="url(#sky)"/>
-                <circle cx="468" cy="38" r="30" fill="#ffd166" opacity="0.35"/>
-                <circle cx="468" cy="38" r="20" fill="#ffd166"/>
-                <g stroke="#4a7fa5" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
-                    <path d="M118 38 q6 -6 12 0 q6 -6 12 0"/>
-                    <path d="M158 26 q5 -5 10 0 q5 -5 10 0"/>
-                </g>
-                <g>
-                    <path d="M64 132 q6 -42 -4 -60" stroke="#0b5d43" stroke-width="6" fill="none" stroke-linecap="round"/>
-                    <g transform="translate(60 70)" fill="#0b5d43">
-                        <path d="M0 0 C-16 -6 -30 -2 -38 8 C-26 0 -12 0 0 5 Z"/>
-                        <path d="M0 0 C-8 -16 -22 -22 -36 -18 C-22 -26 -6 -16 2 -6 Z"/>
-                        <path d="M0 0 C0 -18 10 -28 26 -30 C14 -32 -2 -20 -3 -4 Z"/>
-                        <path d="M0 0 C16 -8 30 -6 40 2 C28 -2 12 0 0 6 Z"/>
-                    </g>
-                </g>
-                <g class="ship" fill="#16406e">
-                    <path d="M196 116 h128 l-14 20 h-100 z"/>
-                    <rect x="212" y="94" width="96" height="22" rx="3"/>
-                    <rect x="228" y="78" width="64" height="16" rx="3"/>
-                    <rect x="244" y="64" width="32" height="14" rx="3"/>
-                    <rect x="252" y="50" width="12" height="16" rx="2"/>
-                </g>
-                <g fill="#9fd9f6">
-                    <circle cx="226" cy="105" r="3"/><circle cx="242" cy="105" r="3"/><circle cx="258" cy="105" r="3"/><circle cx="274" cy="105" r="3"/><circle cx="290" cy="105" r="3"/>
-                    <circle cx="240" cy="85" r="2.5"/><circle cx="256" cy="85" r="2.5"/><circle cx="272" cy="85" r="2.5"/>
-                </g>
-                <path d="M0 134 q35 -12 70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 V180 H0 Z" fill="#2aa7c9" opacity="0.45"/>
-                <path d="M0 146 q35 -10 70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 t70 0 V180 H0 Z" fill="#0e7490" opacity="0.65"/>
-            </svg>
+                <img class="hero-photo" src="https://images.unsplash.com/photo-1559599746-8823b38544c6?auto=format&fit=crop&fm=jpg&q=82&w=1800" alt="Cruise ship sailing on the ocean at sunset">
+                <div class="hero-overlay"></div>
                 <div class="hero-content">
                     <div class="live-badge" id="liveBadge" style="display:none;">
                         <span class="dot"></span> WE ARE LIVE NOW
                     </div>
-                    <h1><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0f3460" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="15" height="14" rx="2"/><polygon points="23 7 16 12 23 17 23 7"/></svg> Live Presentation</h1>
-                    <p> </p>
+                    <div class="hero-kicker">TRAVEL SAVINGS PRESENTATION</div>
+                    <h1>Watch Our 45-Minute Travel Presentation</h1>
+                    <p class="hero-subtitle">Receive an <strong>Exclusive Travel Certificate</strong> as your gift for attending.</p>
+                    <div class="hero-stay">Please join from a <strong>quiet, stationary place</strong> with a <strong>stable internet connection</strong>. Stay connected until the presentation ends to complete your attendance and receive your certificate.</div>
                 </div>
                 <div class="hero-bonus">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f3460" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    <span><strong>+$100 Rewards Voucher Bonus</strong> — join from a laptop, desktop, or tablet for the most stable connection and the best viewing experience.</span>
+                    <span><strong>+$100 Rewards Voucher</strong> — on top of your Travel Certificate when you connect from a <strong>laptop, desktop, or tablet</strong> for the best viewing experience.</span>
                 </div>
             </div>
         </div>
@@ -497,13 +541,82 @@
             </a>
             <div class="countdown" id="countdown"></div>
             <div class="reserve-msg" id="reserveMsg"></div>
-            <a id="reserveBtn" class="reserve-btn inactive" target="_blank" rel="noopener">Reserve Your Spot</a>
+            <a id="reserveBtn" class="reserve-btn inactive" target="_blank" rel="noopener">RESERVE NOW</a>
         </div>
+
+        <!-- Travel Certificate Gift Choices -->
+        <section class="card gifts-card" id="giftChoices">
+            <div class="section-kicker">YOUR TRAVEL CERTIFICATE GIFT</div>
+            <h2 class="gift-heading">Choose the getaway that fits you best</h2>
+            <p class="gift-intro">Watch the full 45-minute presentation, stay connected until the end, and you can receive <strong>one Exclusive Travel Certificate</strong> as your gift for attending.</p>
+
+            <div class="gift-grid">
+                <article class="gift-tile gift-featured">
+                    <div class="gift-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1559599746-8823b38544c6?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Cruise ship sailing at sea" loading="lazy">
+                        <span class="gift-badge">FEATURED</span>
+                    </div>
+                    <div class="gift-copy">
+                        <h3>5D/4N Cruise for 2</h3>
+                        <p><strong>24-month validity.</strong><br>Use it in <strong>Carnival, Royal Caribbean, Norwegian or Princess.</strong></p>
+                    </div>
+                </article>
+
+                <div class="not-cruising">
+                    <span>NOT INTO CRUISING?</span> Choose one of our hotel stay certificates instead.
+                </div>
+
+                <article class="gift-tile">
+                    <div class="gift-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1650939489550-06233b38ad2b?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Beach and hotel pool in the United States" loading="lazy">
+                    </div>
+                    <div class="gift-copy">
+                        <h3>4D/3N U.S. Hotel Stay for 2</h3>
+                        <p><strong>18-month validity.</strong><br>Use it in <strong>Marriott, Hyatt, IHG &amp; Wyndham Hotels.</strong></p>
+                    </div>
+                </article>
+
+                <article class="gift-tile">
+                    <div class="gift-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1725241768349-0550e8f3faba?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Tropical Hawaii beach with palm trees" loading="lazy">
+                    </div>
+                    <div class="gift-copy">
+                        <h3>6D/5N Hawaii Hotel Stay for 2</h3>
+                        <p><strong>18-month validity.</strong><br>Use it in <strong>Marriott, Hyatt, Hilton, IHG &amp; Wyndham Hotels.</strong></p>
+                    </div>
+                </article>
+
+                <article class="gift-tile">
+                    <div class="gift-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1664391962122-34e56b77e859?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Cancun Mexico resort and beach" loading="lazy">
+                    </div>
+                    <div class="gift-copy">
+                        <h3>6D/5N Mexico Hotel Stay</h3>
+                        <p><strong>18-month validity.</strong><br>6D/5N in <strong>Cancun, Riviera Maya, or Puerto Vallarta</strong><br>OR 5D/4N in <strong>Cabo San Lucas</strong><br>Use it in <strong>Accor, Hyatt, Hilton, Marriott &amp; Wyndham.</strong></p>
+                    </div>
+                </article>
+
+                <article class="gift-tile">
+                    <div class="gift-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1722715635165-613a3eb5f525?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Puerto Plata Dominican Republic beach" loading="lazy">
+                    </div>
+                    <div class="gift-copy">
+                        <h3>6D/5N Puerto Plata Resort Getaway</h3>
+                        <p><strong>18-month validity.</strong><br><strong>2 adults + 2 children (12 &amp; under).</strong><br>Stay at <strong>Lifestyle Tropical Beach Resort &amp; Spa.</strong></p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="complete-banner">
+                <div class="complete-icon">✓</div>
+                <div><strong>Important: Please stay until the end.</strong><br>Disconnecting early may affect your eligibility. If you get disconnected, reconnect using the same Zoom link as soon as possible.</div>
+            </div>
+        </section>
 
         <!-- Wide Screen Bonus -->
         <div class="card bonus-card">
             <h2><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f3460" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Best on a Wide Screen</h2>
-            <p class="bonus-text">For the <strong>most stable connection</strong> and the <strong>best viewing experience</strong>, please join from a <strong>laptop, desktop, or tablet</strong> rather than a phone.</p>
+            <p class="bonus-text">For the <strong>most stable connection</strong> and <strong>best viewing experience</strong>, please join from a <strong>laptop, desktop, or tablet</strong>. Please join from a <strong>quiet, stationary place</strong> with a <strong>stable internet connection</strong>—not while driving, walking, or moving around. Stay connected until the presentation ends to complete your attendance.</p>
             <div class="voucher-tag"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#5c430c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4"/><rect x="5" y="12" width="14" height="9"/><line x1="12" y1="8" x2="12" y2="21"/><path d="M12 8s-4 0-5-2 1-4 3-3 2 5 2 5z"/><path d="M12 8s4 0 5-2-1-4-3-3-2 5-2 5z"/></svg><span>+$100 Rewards Voucher bonus — on top of your travel certificate, just for connecting this way.</span></div>
         </div>
 
@@ -540,7 +653,7 @@
             <h2><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f3460" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Important Reminders</h2>
             <ul class="reminders">
                 <li>Host <strong>cannot accept</strong> participants who are driving or in a moving vehicle</li>
-                <li class="highlight">Laptop, desktop, and tablet users also qualify to receive a $100 rewards voucher bonus (for more stability and the best viewing experience).</li>
+                <li class="highlight">Please use a laptop, desktop, or tablet for the most stable connection and best viewing experience. Stay until the end to complete your attendance and remain eligible for the <strong>$100 Rewards Voucher</strong> on top of your Travel Certificate.</li>
                 <li>Mobile phones are welcome but are prone to disconnection when there's a sudden incoming call</li>
             </ul>
         </div>
@@ -604,7 +717,7 @@
                 <li class="clock"><strong>Just 45 minutes</strong> — quick and to the point</li>
                 <li class="heart"><strong>This is not a timeshare presentation</strong></li>
                 <li><strong>No purchase is required</strong> to receive your certificate</li>
-                <li class="cert"><strong>Receive your certificate</strong> if you stay until the end</li>
+                <li class="cert"><strong>Stay until the end</strong> to complete your attendance and receive your certificate</li>
                 <li class="cert">Once your attendance is marked <strong>completed</strong>, your certificate will be <strong>emailed to you the same day</strong></li>
             </ul>
             <div class="cert-preview">
