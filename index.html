@@ -456,13 +456,98 @@
             50% { box-shadow: 0 0 20px rgba(255,87,34,0.7), 0 0 40px rgba(255,87,34,0.4); }
         }
 
-        /* Check-in note card — attention styling */
-        .note-card { border: 2px solid #ffb74d; background: linear-gradient(180deg, #fffaf0, #ffffff); }
-        .note-tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px;
-            text-transform: uppercase; color: #b35900; background: #ffe8c7; border: 1px solid #ffb74d;
-            border-radius: 20px; padding: 3px 12px; margin-bottom: 12px; }
-        .hl { background: linear-gradient(180deg, transparent 55%, #ffe28a 55%); font-weight: 700;
-            color: #5c430c; padding: 0 2px; border-radius: 2px; }
+        /* Check-in survey card — styled to match the supplied reference */
+        .note-card {
+            position: relative;
+            border: 1px solid #c8e1f2;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #fbfdff 0%, #eff8fc 100%);
+            box-shadow: 0 10px 28px rgba(15,52,96,0.08);
+            padding: 25px 26px 27px 48px;
+        }
+        .note-card::before {
+            content: "";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            bottom: 25px;
+            width: 5px;
+            background: #08749d;
+        }
+        .note-card .note-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #fff;
+            background: #123b68;
+            border: 0;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-bottom: 14px;
+        }
+        .note-card h2 {
+            display: block;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            margin-bottom: 14px;
+            color: #0f3460;
+        }
+        .note-card h2 svg { display: none; }
+        .note-card p {
+            font-size: 0.95rem;
+            color: #26445e;
+            margin-bottom: 12px;
+        }
+        .survey-income {
+            background: #e5f3fa;
+            border-radius: 14px;
+            padding: 14px 15px 18px;
+            margin: 10px 0 13px;
+            color: #123b68;
+        }
+        .survey-income-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #123b68;
+        }
+        .survey-income-definition {
+            background: #fff0bf;
+            border: 1px solid #f6bd35;
+            border-radius: 9px;
+            padding: 10px 12px;
+            color: #654400;
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        .note-card .income-guideline {
+            margin-bottom: 12px;
+            color: #26445e;
+        }
+        .note-card .income-guideline strong { color: #123b68; }
+        .survey-reassurance {
+            background: #edf9f0;
+            border: 1px solid #a8dfb7;
+            border-radius: 12px;
+            padding: 14px 15px;
+            color: #075b43;
+            font-size: 0.92rem;
+            line-height: 1.55;
+        }
+        .survey-reassurance strong { color: #064e3b; }
+        .hl { font-weight: 700; color: #123b68; }
+        @media (max-width: 480px) {
+            .note-card { padding: 20px 16px 20px 34px; border-radius: 18px; }
+            .note-card::before { left: 16px; top: 20px; bottom: 20px; width: 4px; }
+            .note-card h2 { font-size: 1.12rem; }
+            .survey-income { padding: 12px; }
+            .survey-income-definition { font-size: 0.88rem; padding: 9px 10px; }
+            .survey-reassurance { padding: 12px; font-size: 0.86rem; }
+        }
+
 
         /* Instructions view */
         .way { margin-top: 18px; background: #f8f9fb; border-radius: 12px; padding: 16px; }
@@ -623,17 +708,18 @@
 
         <!-- Quick Note About Check-in -->
         <div class="card note-card">
-            <h2><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#b35900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> A Quick Note About Check-in</h2>
-            <div class="note-tag">Please read before joining</div>
-            <p style="font-size: 0.95rem; color: #333; margin-bottom: 12px;">
-                When you join the presentation, you'll be asked to complete a short participant survey. This simply helps us get to know our audience and understand who we're presenting to.
-            </p>
-            <p style="font-size: 0.95rem; color: #333; margin-bottom: 12px;">
-                Some questions may include your <strong class="hl">total household income</strong> and <strong>residency/citizenship</strong>. For household income, please consider the <strong class="hl">combined income of everyone</strong> in your household, including yourself, your spouse/partner, or other contributing family members (<strong class="hl">ideally $50,000/year</strong>).
-            </p>
-            <p style="font-size: 0.95rem; color: #333;">
-                The survey does not affect your ability to join the presentation. Everyone is welcome to attend!
-            </p>
+            <div class="note-tag">Quick Check-in Survey</div>
+            <h2>One Quick Step When You Join</h2>
+            <p>When you join, please complete a brief audience check-in. It may ask about U.S./Canadian residency and <strong>combined annual household income.</strong></p>
+
+            <div class="survey-income">
+                <div class="survey-income-title">What does combined annual household income mean?</div>
+                <div class="survey-income-definition">The total income of you, your spouse or partner, and contributing family members.</div>
+            </div>
+
+            <p class="income-guideline"><strong>Ideally above $50,000/year.</strong> This is a guideline, not a requirement to participate.</p>
+
+            <div class="survey-reassurance">Your answers will <strong>not affect your eligibility to participate—you are already invited.</strong> These questions help us profile our audience for research purposes. You can review and answer them when the presentation opens; there’s nothing else to fill out on this page.</div>
         </div>
         <!-- Instructions -->
         <div class="card">
