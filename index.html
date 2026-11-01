@@ -885,8 +885,8 @@
     </div>
 
     <script>
-        const START_HOUR = 13, START_MIN = 45;  // 1:45 PM EDT
-        const END_HOUR = 20, END_MIN = 40;      // 8:40 PM EDT
+        const START_HOUR = 12, START_MIN = 45;  // 12:45 PM Eastern Time
+        const END_HOUR = 19, END_MIN = 45;      // 7:45 PM Eastern Time (exclusive)
         const JOIN_LINK = 'https://live.travelaht.com/aht';
         const RESERVE_LINK = 'https://aht-travel.github.io/reserve/';
 
@@ -900,7 +900,7 @@
             const mins = et.getHours() * 60 + et.getMinutes();
             const start = START_HOUR * 60 + START_MIN;
             const end = END_HOUR * 60 + END_MIN;
-            return mins >= start && mins <= end;
+            return mins >= start && mins < end;
         }
 
         function formatTime(h, m) {
